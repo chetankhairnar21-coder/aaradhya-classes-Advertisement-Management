@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0152)https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARADHYA CLASSES - Contact Management System</title>
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index_files/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-gradient text-white py-4 mb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="mb-1"><i class="fas fa-graduation-cap me-2"></i>AARADHYA CLASSES</h1>
+                    <p class="mb-0">Contact Management &amp; WhatsApp Marketing System</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-light text-dark fs-6" id="currentDate">Saturday 26 July, 2025</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <nav class="nav nav-pills nav-fill mb-4" id="mainTabs">
+            <a class="nav-link active" href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html#dashboard" data-tab="dashboard">
+                <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+            </a>
+            <a class="nav-link" href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html#profile" data-tab="profile">
+                <i class="fas fa-user-circle me-1"></i>My Profile
+            </a>
+            <a class="nav-link" href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html#contacts" data-tab="contacts">
+                <i class="fas fa-address-book me-1"></i>Contacts
+            </a>
+            <a class="nav-link" href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html#groups" data-tab="groups">
+                <i class="fas fa-users me-1"></i>Groups
+            </a>
+            <a class="nav-link" href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html#whatsapp" data-tab="whatsapp">
+                <i class="fab fa-whatsapp me-1"></i>WhatsApp
+            </a>
+            <a class="nav-link" href="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/e151a916db03fd56b0e05452d3143e8b/043ecc9a-3df4-4713-8a90-65489b3b592d/index.html#advertising" data-tab="advertising">
+                <i class="fas fa-bullhorn me-1"></i>Advertise
+            </a>
+        </nav>
+
+        <!-- Dashboard Tab -->
+        <div class="tab-content" id="dashboard" style="display: block;">
+            <h2 class="mb-4"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</h2>
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white dashboard-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5>Total Contacts</h5>
+                                    <h2 id="totalContacts">10</h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-address-book fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-success text-white dashboard-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5>Groups Created</h5>
+                                    <h2 id="totalGroups">3</h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-white dashboard-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5>WhatsApp Verified</h5>
+                                    <h2 id="whatsappContacts">6</h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fab fa-whatsapp fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-info text-white dashboard-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5>Ads Sent Today</h5>
+                                    <h2 id="todayAds">0</h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fas fa-paper-plane fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-clock me-2"></i>Recent Activities</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush" id="recentActivities"><li class="list-group-item">
+            <div class="activity-time">19/7/2025, 8:30:02 pm</div>
+            <div class="activity-message">Generated 14 fee entries for July 2025</div>
+        </li><li class="list-group-item">
+            <div class="activity-time">19/7/2025, 8:29:50 pm</div>
+            <div class="activity-message">Added new student: Purvi Patil</div>
+        </li><li class="list-group-item">
+            <div class="activity-time">19/7/2025, 8:29:30 pm</div>
+            <div class="activity-message">Added new student: Purvi Patil</div>
+        </li><li class="list-group-item">
+            <div class="activity-time">19/7/2025, 8:29:10 pm</div>
+            <div class="activity-message">Added new student: Girish Mahajan</div>
+        </li><li class="list-group-item">
+            <div class="activity-time">19/7/2025, 8:28:52 pm</div>
+            <div class="activity-message">Added new student: Manasvi Salunke</div>
+        </li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-chart-pie me-2"></i>Contact Categories</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="categoryChart" width="583" height="200" style="display: block; box-sizing: border-box; height: 200px; width: 583px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Profile Tab -->
+        <div class="tab-content" id="profile" style="display: none;">
+            <h2 class="mb-4"><i class="fas fa-user-circle me-2"></i>My Profile</h2>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="profile-avatar mb-3">
+                                <i class="fas fa-user-circle fa-5x text-primary"></i>
+                            </div>
+                            <h4 id="profileDisplayName">Snehal Khairnar</h4>
+                            <p class="text-muted" id="profileDisplayDesignation">Senior Teacher</p>
+                            <div class="profile-completion mb-3">
+                                <small class="text-muted">Profile Completion</small>
+                                <div class="progress mt-1">
+                                    <div class="progress-bar" id="profileProgress" style="width: 80%">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-edit me-2"></i>Edit Profile Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="profileForm">
+                                <!-- Personal Information -->
+                                <h6 class="border-bottom pb-2 mb-3">Personal Information</h6>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="profileName" required="">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Designation *</label>
+                                        <input type="text" class="form-control" id="profileDesignation" required="">
+                                    </div>
+                                </div>
+                                
+                                <!-- Contact Details -->
+                                <h6 class="border-bottom pb-2 mb-3 mt-4">Contact Details</h6>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="profilePhone" required="">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">WhatsApp Number *</label>
+                                        <input type="tel" class="form-control" id="profileWhatsapp" required="">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="profileEmail" required="">
+                                </div>
+                                
+                                <!-- Address -->
+                                <h6 class="border-bottom pb-2 mb-3 mt-4">Address</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Complete Address</label>
+                                    <textarea class="form-control" id="profileAddress" rows="2"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">City</label>
+                                        <input type="text" class="form-control" id="profileCity">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">State</label>
+                                        <input type="text" class="form-control" id="profileState">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">PIN Code</label>
+                                        <input type="text" class="form-control" id="profilePin">
+                                    </div>
+                                </div>
+                                
+                                <!-- Institute Details -->
+                                <h6 class="border-bottom pb-2 mb-3 mt-4">Institute Details</h6>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Institute Name</label>
+                                        <input type="text" class="form-control" id="profileInstitute" value="AARADHYA CLASSES">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Established Year</label>
+                                        <input type="number" class="form-control" id="profileEstablished">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Experience (Years)</label>
+                                        <input type="text" class="form-control" id="profileExperience">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Specialization</label>
+                                        <input type="text" class="form-control" id="profileSpecialization">
+                                    </div>
+                                </div>
+                                
+                                <!-- Additional Information -->
+                                <h6 class="border-bottom pb-2 mb-3 mt-4">Additional Information</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Subjects Taught</label>
+                                    <input type="text" class="form-control" id="profileSubjects" placeholder="e.g., Mathematics, Physics, Chemistry">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Qualifications</label>
+                                    <input type="text" class="form-control" id="profileQualifications">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">About Me</label>
+                                    <textarea class="form-control" id="profileAbout" rows="3"></textarea>
+                                </div>
+                                
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn btn-secondary me-2" onclick="resetProfileForm()">Reset</button>
+                                    <button type="button" class="btn btn-primary" onclick="saveProfile()">
+                                        <i class="fas fa-save me-1"></i>Update Profile
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacts Tab -->
+        <div class="tab-content" id="contacts" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-address-book me-2"></i>Contact Management</h2>
+                <button class="btn btn-primary" onclick="openContactModal()">
+                    <i class="fas fa-plus me-1"></i>Add Contact
+                </button>
+            </div>
+            
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="contactSearch" placeholder="Search contacts...">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Parent">Parents</option>
+                        <option value="Current Student">Current Students</option>
+                        <option value="Prospective Student">Prospective Students</option>
+                        <option value="Alumni">Alumni</option>
+                        <option value="Teacher">Teachers</option>
+                        <option value="VIP">VIP Contacts</option>
+                        <option value="Other">Others</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" id="groupFilter">
+                        <option value="">All Groups</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-primary" onclick="selectAll()">
+                            <i class="fas fa-check-square me-1"></i>Select All
+                        </button>
+                        <button class="btn btn-outline-danger" onclick="clearSelection()">
+                            <i class="fas fa-times me-1"></i>Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="selectAllCheckbox"></th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                    <th>WhatsApp</th>
+                                    <th>Category</th>
+                                    <th>Groups</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contactsTable">
+                                <!-- Contacts will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Groups Tab -->
+        <div class="tab-content" id="groups" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-users me-2"></i>Group Management</h2>
+                <button class="btn btn-primary" onclick="openGroupModal()">
+                    <i class="fas fa-plus me-1"></i>Create Group
+                </button>
+            </div>
+
+            <div class="row" id="groupsGrid">
+                <!-- Groups will be populated here -->
+            </div>
+        </div>
+
+        <!-- WhatsApp Integration Tab -->
+        <div class="tab-content" id="whatsapp" style="display: none;">
+            <h2 class="mb-4"><i class="fab fa-whatsapp me-2"></i>WhatsApp Integration</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-download me-2"></i>Import from WhatsApp</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Import contacts directly from WhatsApp Web</p>
+                            
+                            <div class="whatsapp-import-steps">
+                                <div class="step-item mb-3">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h6>Open WhatsApp Web</h6>
+                                        <p>Go to <a href="https://web.whatsapp.com/" target="_blank">web.whatsapp.com</a> and scan QR code</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item mb-3">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h6>Export Contacts</h6>
+                                        <p>Use WhatsApp's export feature to get your contacts</p>
+                                        <button class="btn whatsapp-btn btn-sm" onclick="simulateWhatsAppImport()">
+                                            <i class="fab fa-whatsapp me-1"></i>Simulate Import
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-qrcode me-2"></i>QR Code Scanner</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="qr-scanner-mockup mb-3">
+                                <i class="fas fa-qrcode fa-4x text-primary"></i>
+                                <p class="mt-2">QR Code Scanner Interface</p>
+                            </div>
+                            <button class="btn btn-primary" onclick="simulateQRScan()">
+                                <i class="fas fa-camera me-1"></i>Start QR Scanner
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-check-circle me-2"></i>Contact Verification</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="tel" class="form-control" id="verifyPhone" placeholder="Enter phone number to verify WhatsApp">
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn whatsapp-btn w-100" onclick="verifyWhatsAppNumber()">
+                                        <i class="fas fa-check me-1"></i>Verify WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h6>Bulk Verification</h6>
+                                <p class="text-muted">Upload a CSV file with phone numbers for bulk verification</p>
+                                <input type="file" class="form-control" accept=".csv" id="bulkVerificationFile">
+                                <button class="btn btn-outline-primary mt-2" onclick="processBulkVerification()">
+                                    <i class="fas fa-upload me-1"></i>Process Bulk Verification
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advertising Tab -->
+        <div class="tab-content" id="advertising" style="display: none;">
+            <h2 class="mb-4"><i class="fas fa-bullhorn me-2"></i>Send Advertisements</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-users me-2"></i>Select Recipients</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Select Groups</label>
+                                <div id="adGroupSelection" class="border p-3 rounded" style="max-height: 200px; overflow-y: auto;">
+                                    <!-- Group checkboxes will be populated here -->
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Or Select Individual Contacts</label>
+                                <select multiple="" class="form-control" id="adContactSelection" style="height: 150px;">
+                                    <!-- Contacts will be populated here -->
+                                </select>
+                                <small class="text-muted">Hold Ctrl/Cmd to select multiple contacts</small>
+                            </div>
+                            
+                            <div class="selected-count">
+                                <strong>Selected Recipients: <span id="selectedCount">0</span></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-edit me-2"></i>Create Message</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Message Template</label>
+                                <select class="form-control" id="messageTemplate" onchange="loadTemplate()">
+                                    <option value="">Select Template</option>
+                                    <option value="parents">For Parents</option>
+                                    <option value="students">For Students</option>
+                                    <option value="prospects">For Prospects</option>
+                                    <option value="custom">Custom Message</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Message Content</label>
+                                <textarea class="form-control" id="messageContent" rows="8" placeholder="Type your message here..."></textarea>
+                                <small class="text-muted">Use {name} for personalization</small>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-outline-primary" onclick="previewMessage()">
+                                    <i class="fas fa-eye me-1"></i>Preview
+                                </button>
+                                <button class="btn whatsapp-btn" onclick="sendBulkWhatsApp()">
+                                    <i class="fab fa-whatsapp me-1"></i>Send to WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalTitle">Add Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <input type="hidden" id="contactId">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="contactName" class="form-label">Name *</label>
+                                <input type="text" class="form-control" id="contactName" required="">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="contactPhone" class="form-label">Phone *</label>
+                                <input type="tel" class="form-control" id="contactPhone" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="contactWhatsapp" class="form-label">WhatsApp Number</label>
+                                <input type="tel" class="form-control" id="contactWhatsapp">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="contactEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contactEmail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="contactCategory" class="form-label">Category *</label>
+                                <select class="form-control" id="contactCategory" required="">
+                                    <option value="">Select Category</option>
+                                    <option value="Parent">Parent</option>
+                                    <option value="Current Student">Current Student</option>
+                                    <option value="Prospective Student">Prospective Student</option>
+                                    <option value="Alumni">Alumni</option>
+                                    <option value="Teacher">Teacher</option>
+                                    <option value="VIP">VIP Contact</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="contactGroups" class="form-label">Groups</label>
+                                <select multiple="" class="form-control" id="contactGroups">
+                                    <!-- Groups will be populated here -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactAddress" class="form-label">Address</label>
+                            <textarea class="form-control" id="contactAddress" rows="2"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactNotes" class="form-label">Notes</label>
+                            <textarea class="form-control" id="contactNotes" rows="2"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveContact()">Save Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Group Modal -->
+    <div class="modal fade" id="groupModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="groupModalTitle">Create Group</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="groupForm">
+                        <input type="hidden" id="groupId">
+                        <div class="mb-3">
+                            <label for="groupName" class="form-label">Group Name *</label>
+                            <input type="text" class="form-control" id="groupName" required="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="groupDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="groupDescription" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveGroup()">Save Group</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Preview Modal -->
+    <div class="modal fade" id="previewModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="whatsapp-preview">
+                        <div class="message-bubble" id="previewContent">
+                            <!-- Preview content will be shown here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn whatsapp-btn" onclick="sendBulkWhatsApp()">
+                        <i class="fab fa-whatsapp me-1"></i>Send to WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert">
+            <div class="toast-header">
+                <strong class="me-auto">Notification</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Message
+            </div>
+        </div>
+    </div>
+
+    <script src="./index_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./index_files/chart.js.download"></script>
+    <script src="./index_files/app.js.download"></script>
+
+</body></html>
